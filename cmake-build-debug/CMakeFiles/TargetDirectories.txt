@@ -1,0 +1,3 @@
+C:/Users/usuario/Documents/GitHub/examen-tema1/cmake-build-debug/CMakeFiles/examen_tema1.dir
+C:/Users/usuario/Documents/GitHub/examen-tema1/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/usuario/Documents/GitHub/examen-tema1/cmake-build-debug/CMakeFiles/rebuild_cache.dir
