@@ -194,16 +194,16 @@ int main() {
     //Fin de Ej10: Registro de Profesores
 
 
-    //    //Ej4: Manejo de Excepciones
-//        cout << "\n--------------------------------" <<endl;
-//        cout << "Ejercicio 4: Manejo de Excepciones" << endl;
-//        cout << "--------------------------------" <<endl;
-//        try {
-//            int resultado = dividir(10, 0);
-//            cout << "Resultado: " << resultado << endl;
-//        } catch (const std::runtime_error& e) {
-//            cerr << "Excepcion atrapada: " << e.what() << endl;
-//        }
-//    //Fin de Ej4: Manejo de Excepciones
+        //Ej4: Manejo de Excepciones
+        cout << "\n--------------------------------" <<endl;
+        cout << "Ejercicio 4: Manejo de Excepciones" << endl;
+        cout << "--------------------------------" <<endl;
+        try {
+            int resultado = dividir(10, 0);
+            cout << "Resultado: " << resultado << endl;
+        } catch (const std::runtime_error& e) {
+            cerr << "Excepcion atrapada: " << e.what() << endl;
+        }
+    //Fin de Ej4: Manejo de Excepciones
     return 0;
 }
