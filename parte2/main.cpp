@@ -9,6 +9,12 @@ int suma(int num1, int num2) {
     return num1 + num2;
 }
 
+//Ej8: Filtrado de Estudiantes por Grado
+class Matregis : public std::runtime_error {
+public:
+    Matregis() : std::runtime_error("Error: Materia ya registrada.") {}
+};
+
 //Ej2: Gestion de Estudiantes
 class Estudiante {
 public:
@@ -24,6 +30,12 @@ public:
 
     //Ej5: Registro de Materias
     void registrar_materia(const std::string& materia) {
+        //Ej8: Filtrado de Estudiantes por Grado
+        for (const auto& mat : materias) {
+            if (mat == materia) {
+                throw Matregis();
+            }
+        }
         materias.push_back(materia);
     }
 
@@ -35,6 +47,22 @@ public:
         }
     }
 
+};
+
+
+
+//Ej10: Registro de Profesores
+class Profesor {
+public:
+    std::string nombre;
+    int edad;
+    std::string materia;
+    int añosExperiencia;
+
+    void mostrar_info_profesor() {
+        std::cout << "Nombre: " << nombre << ", Edad: " << edad << ", Materia: " << materia
+                  << ", Años de Experiencia: " << añosExperiencia << std::endl;
+    }
 };
 
 //Ej3: Optimización de Memoria
@@ -108,18 +136,6 @@ int main() {
         cout << "Despues del intercambio: x=" << x << ", y=" << y << endl;
     //Fin de Ej3: Optimización de Memoria
 
-//    //Ej4: Manejo de Excepciones
-//        cout << "\n--------------------------------" <<endl;
-//        cout << "Ejercicio 4: Manejo de Excepciones" << endl;
-//        cout << "--------------------------------" <<endl;
-//        try {
-//            int resultado = dividir(10, 0);
-//            cout << "Resultado: " << resultado << endl;
-//        } catch (const std::runtime_error& e) {
-//            cerr << "Excepcion atrapada: " << e.what() << endl;
-//        }
-//    //Fin de Ej4: Manejo de Excepciones
-
     //Ej5: Registro de Materias
         cout << "\n--------------------------------" <<endl;
         cout << "Ejercicio 5: Registro de Materias" << endl;
@@ -152,6 +168,42 @@ int main() {
         clase2.mostrar_ausencia();
     //Fin de Ej7: Manejo de Ausencias
 
+    //Ej8: Filtrado de Estudiantes por Grado
+        cout << "\n--------------------------------" <<endl;
+        cout << "Ejercicio 8: Filtrado de Estudiantes por Grado" << endl;
+        cout << "--------------------------------" <<endl;
+        try {
+            estudiante1.registrar_materia("Matemáticas");
+            estudiante1.registrar_materia("Historia");
+        } catch (const Matregis& e) {
+            cerr << "Excepción atrapada: " << e.what() << endl;
+        }
+    //Fin de Ej8: Filtrado de Estudiantes por Grado
 
+    //Ej10: Registro de Profesores
+        cout << "\n--------------------------------" <<endl;
+        cout << "Ejercicio 9: Registro de Profesores" << endl;
+        cout << "--------------------------------" <<endl;
+        Profesor profesor1;
+        profesor1.nombre = "Dr. García";
+        profesor1.edad = 40;
+        profesor1.materia = "Física";
+        profesor1.añosExperiencia = 15;
+
+        profesor1.mostrar_info_profesor();
+    //Fin de Ej10: Registro de Profesores
+
+
+    //    //Ej4: Manejo de Excepciones
+//        cout << "\n--------------------------------" <<endl;
+//        cout << "Ejercicio 4: Manejo de Excepciones" << endl;
+//        cout << "--------------------------------" <<endl;
+//        try {
+//            int resultado = dividir(10, 0);
+//            cout << "Resultado: " << resultado << endl;
+//        } catch (const std::runtime_error& e) {
+//            cerr << "Excepcion atrapada: " << e.what() << endl;
+//        }
+//    //Fin de Ej4: Manejo de Excepciones
     return 0;
 }
