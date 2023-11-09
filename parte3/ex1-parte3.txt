@@ -1,0 +1,35 @@
+Preguntas de Desarrollo
+
+8. La programación ha adoptado diferentes enfoques a lo largo del tiempo. Explica:
+
+ - ¿Cómo la programación orientada a objetos difiere de la programación procedimental?
+ - ¿Cómo C++ brinda soporte para ambos paradigmas?
+
+RPTA: 
+	- A pesar de que ambos son dos enfoques para escribir código, la principal diferencia es que la POO, Programación Orientada a Objetos, se centra en los objetos o instancias de clases las cuales pueden tener datos y/o métodos, esto favorece la modularidad y la reutilización del código. Mientras que la Procedimental, se centra en procedimientos o funciones, se estructura en torno a tareas a realizar dividiendose en funciones, se trata más de secuencias y no tanto de encapsulación de datos.
+	- C++ para con la POO le permite la creacion de clases y objetos, permite conceptos como herencia, heradacion de caracteristicas, poliformismo, modificacion de la estructura, y encapsulamiento, encapsular conceptos y acciones en objetos. Por otro lado con la Procedimental, C++ le permite conservar los procesos, puede tambien escribir funciones fuera de las clases, puede manejar estructuras, punteros como lo hacen habitualmente los lenguajes procedimentales
+
+
+9. Las excepciones en C++ tienen un comportamiento específico. Describe:
+
+ - ¿Qué es la propagación de una excepción?
+ - ¿Qué ocurre si una excepción lanzada no es capturada por ningún bloque catch?
+
+RPTA: 
+
+	- La propagación de una excepción se refiere a como la excepción se mueve a través de las funciones en en orden de llamadas hasta que encuentre el bloque CATCH que pueda manejarla o hasta que alcance la funcion MAIN() sin que sea capturada.
+	- Si una excepción no es capturada por ningun bloque CATCH se realiza la liberación de recursos y el control pasa a la función por la cual fue llamada y el proceso se repite hasta llegar a la función MAIN().
+ 
+
+10. La gestión de recursos es un concepto crucial en la programación. Explica:
+
+ - ¿Qué se entiende por "Adquisición de Recursos" en el contexto de C++?
+ - ¿Por qué es importante y cómo se relaciona con la gestión de excepciones?
+
+RPTA: 
+	- Se entiende que es obtener y asignar recursos del sistema como la memoria dinamica, archivos, conexiones u otros recursos externos necesarios para el programa. 
+	- Es importante la gestión de recursos ya que permite liberar recursos para evitar probelmas como fugas de memoria o retención indebida de recursos. La importancia de la gestión de excepciones es que permiten realizar una liberación adecuada de recursos en caso de errores, comunmente se utiliza los bloques TRY o CATCH junto con los objetos para garantizar la liberación de recursos necesarios.
+
+
+
+
