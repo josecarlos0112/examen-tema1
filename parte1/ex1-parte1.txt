@@ -1,0 +1,13 @@
+Preguntas de opción múltiple:
+
+1. C++ es un lenguaje de programación ampliamente utilizado que ha evolucionado a lo largo de los años. ¿Cuáles de las siguientes opciones describen correctamente las características centrales de C++?
+
+RPTA: Opcion d. 
+
+2. Durante el proceso de desarrollo, a menudo es necesario compilar y enlazar múltiples archivos. En este contexto, ¿qué es un archivo makefile?
+
+RPTA: Opcion b.
+
+3.En C++, las variables pueden referirse a datos o direcciones de memoria. En relación a esto, ¿qué son los punteros en la programación C++?
+
+RPTA: Opcion b.
